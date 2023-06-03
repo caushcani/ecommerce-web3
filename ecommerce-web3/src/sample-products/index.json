@@ -1,0 +1,62 @@
+[
+  {
+    "id": "96YC510",
+    "name": "hero Product",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "hero": "OMG This just came out today!",
+    "image": "http://placehold.it/300x300/999/CCC"
+  },
+  {
+    "id": "Z9G4410",
+    "name": "Product 1",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "image": "http://placehold.it/300x300/999/CCC"
+  },
+  {
+    "id": "VL4KS10",
+    "name": "Product 2",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "offer": "BOGOF",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "image": "http://placehold.it/300x300/999/CCC"
+  },
+  {
+    "id": "2P2SV10",
+    "name": "Product 3",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "image": "http://placehold.it/300x300/999/CCC",
+    "info": "This is the latest and greatest product from Derp corp."
+  },
+  {
+    "id": "D43YB10",
+    "name": "Product 4",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "offer": "No srsly GTFO",
+    "image": "http://placehold.it/300x300/999/CCC"
+  },
+  {
+    "id": "9P4LP10",
+    "name": "Product 5",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "image": "http://placehold.it/300x300/999/CCC"
+  },
+  {
+    "id": "323A98DB",
+    "name": "Product 6",
+    "detail": "Lorem ipsum dolor sit amet",
+    "price": "99",
+    "info": "This is the latest and greatest product from Derp corp.",
+    "offer": "info with offer",
+    "image": "http://placehold.it/300x300/999/CCC"
+  }
+]
