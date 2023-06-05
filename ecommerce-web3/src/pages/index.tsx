@@ -14,9 +14,8 @@ import Seo from '@/components/Seo';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-import Vercel from '~/svg/Vercel.svg';
-import Products from './products';
 import Navbar from '@/components/navbar';
+import Web3Provider from '@/utils/web3provider';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -24,14 +23,13 @@ import Navbar from '@/components/navbar';
 
 export default function HomePage() {
   return (
-    <Layout>
-      {/* <Seo templateTitle='Home' /> */}
-      <Seo />
-
-      <main>
-        <Navbar />
-        <Products />
-      </main>
-    </Layout>
+    <Web3Provider>
+      <Layout>
+        <Seo />
+        <main>
+          <Navbar />
+        </main>
+      </Layout>
+    </Web3Provider>
   );
 }

@@ -1,10 +1,12 @@
+import { useWeb3Provider } from '@/utils/web3provider';
 import SampleProduct from '../../sample-products/index.json';
 import Footer from '../footer';
 import Navbar from '../navbar';
 import Product from '../product';
 
 const ProductList = () => {
-  console.log('sample', SampleProduct);
+  const provider = useWeb3Provider();
+  console.log(provider);
 
   return (
     SampleProduct && (
