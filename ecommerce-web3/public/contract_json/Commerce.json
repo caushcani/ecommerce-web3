@@ -1,0 +1,235 @@
+{
+  "contractName": "Commerce",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Commerce.sol\":\"Commerce\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Commerce.sol\":{\"keccak256\":\"0xe58a9d2d2d0e9e6bfebaa59be7d3afe53a319b9baa10038f4879cad1e3ce9ad0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ac237b012d95b347062937dfd03c80fd32f6cad8a296a126d96791f7dbad478\",\"dweb:/ipfs/QmYAuw9k3CQvi79ueWquZaWnbBNeaC6mpMW7wq459WEqes\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212209faff465048f23d5c74d9e41b73435714aa960d464ccb131b57a59a439b01b3664736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212209faff465048f23d5c74d9e41b73435714aa960d464ccb131b57a59a439b01b3664736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "150:132:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "150:132:0:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\n// compiler version must be greater than or equal to 0.8.17 and less than 0.9.0\r\npragma solidity >=0.8.17 <0.9.0;\r\n\r\ncontract Commerce{\r\n\r\n\tstruct Product{\r\n\t\tuint id;\r\n\t\tuint price;\r\n\t\tstring product_name;\r\n\t\taddress owner;\r\n\t\tbytes32 proof;\r\n\t}\r\n}",
+  "sourcePath": "C:\\Users\\User\\Desktop\\ecommerce-web3\\contracts\\Commerce.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Commerce.sol",
+    "exportedSymbols": {
+      "Commerce": [
+        13
+      ]
+    },
+    "id": 14,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".17",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "114:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Commerce",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13
+        ],
+        "name": "Commerce",
+        "nameLocation": "159:8:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Commerce.Product",
+            "id": 12,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "197:2:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "192:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "192:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "209:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "204:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "204:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "mutability": "mutable",
+                "name": "product_name",
+                "nameLocation": "226:12:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "219:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "251:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "243:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "243:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "mutability": "mutable",
+                "name": "proof",
+                "nameLocation": "269:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "261:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "261:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Product",
+            "nameLocation": "180:7:0",
+            "nodeType": "StructDefinition",
+            "scope": 13,
+            "src": "173:106:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 14,
+        "src": "150:132:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "114:168:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf5F278232DB379f59A41c45e5671B88310cd6b75",
+      "transactionHash": "0x8d4d494b331f6f9f0e291b219fcbc0942e5ac47d58d3711a0e57b36318214aa9"
+    }
+  },
+  "schemaVersion": "3.4.14",
+  "updatedAt": "2023-06-10T09:42:57.569Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
