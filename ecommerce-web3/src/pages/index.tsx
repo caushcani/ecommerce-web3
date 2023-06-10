@@ -1,10 +1,6 @@
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 
 /**
@@ -15,7 +11,8 @@ import Seo from '@/components/Seo';
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 import Navbar from '@/components/navbar';
-import Web3Provider from '@/utils/web3provider';
+import Web3Provider, { useWeb3Provider } from '@/utils/web3provider';
+import WelcomeCard from '@/components/welcome-card';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -28,6 +25,7 @@ export default function HomePage() {
         <Seo />
         <main>
           <Navbar />
+          <WelcomeCard />
         </main>
       </Layout>
     </Web3Provider>

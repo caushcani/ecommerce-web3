@@ -6,7 +6,6 @@ import Product from '../product';
 
 const ProductList = () => {
   const provider = useWeb3Provider();
-  console.log(provider);
 
   return (
     SampleProduct && (

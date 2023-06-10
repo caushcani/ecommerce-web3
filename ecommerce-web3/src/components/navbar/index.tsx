@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className='fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-900'>
       <div className='mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4'>
-        <a href='https://flowbite.com/' className='flex items-center'>
+        <a href='' className='flex items-center'>
           <img
             src='https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo.png'
             className='mr-3 h-8'

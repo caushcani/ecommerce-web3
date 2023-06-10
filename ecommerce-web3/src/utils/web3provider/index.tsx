@@ -5,7 +5,7 @@ const Web3Context: any = createContext(null);
 
 const Web3Provider = ({ children }: any) => {
   const [web3Provider, setweb3Provider] = useState<any>(null);
-  const [account, setAccount] = useState(null);
+  const [account, setAccount] = useState<any>(null);
 
   const initializeProvider = async () => {
     let provider = null;
@@ -31,14 +31,17 @@ const Web3Provider = ({ children }: any) => {
   }, []);
 
   return (
-    <Web3Context.Provider
-      value={{
-        web3Provider,
-        account,
-      }}
-    >
-      {children}
-    </Web3Context.Provider>
+    account && (
+      <Web3Context.Provider
+        value={{
+          web3Provider,
+          account,
+          isAdmin: account === '0xf97f4906af0170043e089ae4a53be8f5d86bd4d8',
+        }}
+      >
+        {children}
+      </Web3Context.Provider>
+    )
   );
 };
 

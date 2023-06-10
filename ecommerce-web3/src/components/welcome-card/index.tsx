@@ -1,44 +1,25 @@
-import Link from 'next/link';
+import { useWeb3Provider } from '@/utils/web3provider';
+import { useState } from 'react';
 
-interface IProduct {
-  id: any;
-  name: string;
-  info: string;
-  price: number;
-  image: string;
-}
-
-const ETHEREUM_PRICE = 1715;
-
-interface IProductProps {
-  product: IProduct;
-}
-const Product = (props: IProductProps) => {
-  const { id, name, info, price, image } = props.product;
+const WelcomeCard = () => {
+  const { account, isAdmin } = useWeb3Provider();
 
   return (
-    <div className='max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800'>
-      <a>
-        <img className='rounded-t-lg' src={image} alt='' />
-      </a>
-      <div className=' p-5 '>
-        <div className='align-center flex justify-between'>
+    <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
+      <div className=' rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800'>
+        <a href='#'>
           <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-            {name}
+            welcome {account}
           </h5>
-
-          <p className='text-sm font-medium text-gray-900'>
-            {(price / ETHEREUM_PRICE).toFixed(2)} ETH
-          </p>
-        </div>
+        </a>
         <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-          {info}
+          You are logged in as {isAdmin ? 'admin' : 'user'}
         </p>
-        <Link
-          href={`/products/${id}`}
+        <a
+          href='#'
           className='inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
         >
-          Buy
+          Read more
           <svg
             aria-hidden='true'
             className='-mr-1 ml-2 h-4 w-4'
@@ -52,10 +33,10 @@ const Product = (props: IProductProps) => {
               clip-rule='evenodd'
             ></path>
           </svg>
-        </Link>
+        </a>
       </div>
     </div>
   );
 };
 
-export default Product;
+export default WelcomeCard;
