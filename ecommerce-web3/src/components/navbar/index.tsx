@@ -16,6 +16,10 @@ const MENU_ITEM = [
     page: 'Profile',
     link: '/profile',
   },
+  {
+    page: 'My Products',
+    link: '/owned-products',
+  },
 ];
 
 const Navbar = () => {

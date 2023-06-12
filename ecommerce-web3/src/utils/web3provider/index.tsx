@@ -1,11 +1,13 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import Web3 from 'web3';
+import ContractManager from './contract-manager';
 
 const Web3Context: any = createContext(null);
 
 const Web3Provider = ({ children }: any) => {
   const [web3Provider, setweb3Provider] = useState<any>(null);
   const [account, setAccount] = useState<any>(null);
+  const [contract, setContract] = useState(null);
 
   const initializeProvider = async () => {
     let provider = null;
@@ -24,6 +26,19 @@ const Web3Provider = ({ children }: any) => {
     setweb3Provider({
       web3: new Web3(provider),
     });
+
+    const myContract: any = await ContractManager.getContract('Commerce');
+
+    if (myContract) {
+      const _web3: any = new Web3(provider);
+      const networkId = await _web3.eth.net.getId();
+      const networkData = myContract.networks[networkId];
+      const contractInstance = new _web3.eth.Contract(
+        myContract.abi,
+        networkData.address
+      );
+      setContract(contractInstance);
+    }
   };
 
   useEffect(() => {
@@ -37,6 +52,7 @@ const Web3Provider = ({ children }: any) => {
           web3Provider,
           account,
           isAdmin: account === '0xf97f4906af0170043e089ae4a53be8f5d86bd4d8',
+          contract,
         }}
       >
         {children}
